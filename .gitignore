@@ -1,0 +1,9 @@
+/node_modules/
+/.idea/
+/dist/
+/.git/
+/**/*.psd
+/**/Thumbs.db
+/**/*.DS_Store
+/yarn.lock
+/yarn-error.log

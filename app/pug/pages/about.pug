@@ -1,0 +1,58 @@
+extends ../main.layout
+
+block content
+  section.section.hero
+    ul.socials
+      each item in ['vk','github','in']
+        li.socials__item
+          a(href="").socials__link
+            svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="socials__image socials__image--" + item)
+              use(xlink:href="#" + item)
+    a(href="").hamburger
+    a(href="").down-arrow
+      svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink")
+        use(xlink:href="#arrow_down")
+    .hero__title
+      svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink").section__title
+        use(xlink:href="#about_header")
+      .user.hero__user-block
+        .user__photo
+          img(src="./img/my.jpg")
+        .user__name Yuriy Bochkarev
+        .user__desc My Portfolio
+
+  section.section.about
+    .about__left
+      svg.triangle.triangle-fill-white
+      .title.about__section--title About Me
+      .user-about
+        .user-about__picture
+        .user-about__title
+          .subtitle
+            | Who I'm
+        .user-about__text
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam aut consectetur consequuntur cumque cupiditate debitis deserunt ducimus ea eos esse expedita id maiores omnis quod repellat repudiandae totam, unde.
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam aut consectetur consequuntur cumque cupiditate debitis deserunt ducimus ea eos esse expedita id maiores omnis quod repellat repudiandae totam, unde.
+    .about__right
+      svg.triangle.triangle-fill-beige
+      .about-data
+        .about-data__description.about-user-info
+          .about-user-info__title
+            .subtitle
+              | What I can be useful
+          .about-user-info__text
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, quo.
+        .about-data__content
+          ul.skills
+            each skill in skills
+              each skillArray, skillName in skill
+                li.skills__item
+                  .skill-section
+                    .skill-section__title= skillName
+                    ul.skill-section__list
+                      each skillTitle in skillArray
+                        li.skill-section__item
+                          .skill
+                            svg.skill__circle
+                            .skill__name= skillTitle
+  section.section.map
