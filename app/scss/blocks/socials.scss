@@ -1,0 +1,26 @@
+.socials{
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.socials__item{
+  margin: 0 15px;
+}
+
+.socials__image{
+  height: 22px;
+  fill: #FFFFFF;
+  opacity: .5;
+  &--vk{
+    width: 31px;
+  }
+  &--github{
+    width: 26px;
+  }
+  &--in{
+    width: 24px;
+  }
+}

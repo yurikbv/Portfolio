@@ -1,0 +1,10 @@
+.triangle{
+  height: 100px;
+  width: 50%;
+  &-fill-white{
+    fill: $mount-white;
+  }
+  &-fill-beige{
+    fill: $mount-beige;
+  }
+}

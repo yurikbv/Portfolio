@@ -1,0 +1,38 @@
+.skill-section__title{
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.skills__item{
+  margin-bottom: 30px;
+
+}
+
+.skill-section__list{
+  margin-top: 15px;
+  display: flex;
+}
+
+.skill-section__item:nth-child(1n+2){
+  margin-left: 20px;
+}
+
+.skill__name{
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 29.39px;
+}
+
+.mountains{
+  .skill__name{
+    color: #00bfa5;
+  }
+}
+
+.skill__circle{
+  width: 130px;
+  height: 130px;
+  border: 1px solid #00bfa5;
+  border-radius: 50%;
+}

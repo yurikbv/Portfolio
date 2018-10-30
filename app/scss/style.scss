@@ -1,8 +1,10 @@
 //Default
-@import "fonts";
-@import "libs";
-@import "vars";
-@import "smart-grid";
-@import "basis";
+@import "layout/fonts";
+@import "layout/libs";
+@import "layout/vars";
+@import "layout/smart-grid";
+@import "layout/basis";
+//Mixins
+@import "_mixins/mixins";
 //Blocks
-@import "hero";
+@import "blocks/**/*";

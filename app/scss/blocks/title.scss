@@ -1,0 +1,54 @@
+.title,
+.subtitle{
+  font-family: "Bernier",Arial,sans-serif;
+  font-weight: 400;
+  letter-spacing: 1.57px;
+  position: relative;
+  display: inline-block;
+  &:after{
+    right: 40px;
+  }
+  &:before{
+    left: 40px;
+  }
+}
+
+.title{
+  font-size: 63px;
+  padding: 45px 80px;
+  color: #373e42;
+  line-height: 66px;
+}
+
+.subtitle{
+  color: #455a64;
+  padding: 40px 80px;
+  font-size: 35px;
+  line-height: 41.01px;
+}
+
+.mountains{
+  .title,
+  .subtitle{
+    &:after,
+    &:before{
+      content: '';
+      display: block;
+      @include centered(y);
+      width: 22px;
+      height: 5px;
+    }
+  }
+  .title{
+    &:after,
+    &:before{
+      background-color: rgba(#373e42,.2);
+    }
+  }
+  .subtitle{
+    &:after,
+    &:before{
+      background-color: rgba(#455a64,.2);
+    }
+  }
+}

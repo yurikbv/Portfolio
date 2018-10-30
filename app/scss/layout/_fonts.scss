@@ -1,0 +1,9 @@
+@import "../_mixins/font-face";
+
+@include font-face("Roboto", "../fonts/Roboto-Regular");
+@include font-face("Roboto", "../fonts/Roboto-Light", 300);
+@include font-face("Roboto", "../fonts/Roboto-Medium", 500);
+@include font-face("Roboto", "../fonts/Roboto-Bold", bold);
+@include font-face("Bernier", "../fonts/BERNIERRegular-Regular");
+@include font-face("Sansus", "../fonts/Sansus-Webissimo-Regular");
+@include font-face("LeviReBrushed", "../fonts/LeviReBrushed");

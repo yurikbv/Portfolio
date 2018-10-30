@@ -20,7 +20,8 @@ const gulp           = require('gulp'),
     prettyHtml = require('gulp-pretty-html'),     //Улучшает выходной PUG
     cheerio = require('gulp-cheerio'),            //Очищаем SVG
     svg2string = require('gulp-svg2string'),
-    plumber = require('gulp-plumber');
+    plumber = require('gulp-plumber'),            //Bыводит ошибки при сборке Gulp в виде системных сообщений
+    sassGlob = require('gulp-sass-glob');
 
 
 gulp.task('pug', function() {
@@ -63,7 +64,11 @@ gulp.task('browser-sync', function() {
 
 gulp.task('sass', function() {
 	return gulp.src('app/scss/style.scss')
-	.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
+  .pipe(plumber({
+    errorHandler: notify.onError()
+  }))
+  .pipe(sassGlob())
+	.pipe(sass())
   .pipe(gcmq())
   .pipe(sourcemaps.init())
   .pipe(autoprefixer(['last 2 versions']))
@@ -91,7 +96,7 @@ gulp.task("sprite", function () {
       }
     }))
     .pipe(svg2string())
-    .pipe(gulp.dest('app/img'));
+    .pipe(gulp.dest('app/js'));
 });
 
 gulp.task('watch', ['pug', 'sass', 'js', 'browser-sync'], function() {
@@ -107,7 +112,7 @@ gulp.task('imagemin', function() {
 	.pipe(gulp.dest('dist/img')); 
 });
 
-gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
+gulp.task('build', ['removedist', 'imagemin', 'pug', 'sass', 'js'], function() {
 
 	let buildFiles = gulp.src([
 		'app/*.html',
@@ -120,16 +125,13 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 		]).pipe(gulp.dest('dist/css'));
 
 	let buildJs = gulp.src([
-		'app/js/scripts.min.js'
+		'app/js/scripts.min.js',
+    'app/js/svg.js'
 		]).pipe(gulp.dest('dist/js'));
 
 	let buildFonts = gulp.src([
 		'app/fonts/!**/!*'
 		]).pipe(gulp.dest('dist/fonts'));
-
-	let buildImg = gulp.src([
-		'app/img/!**/!*'
-	  ]).pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('deploy', function() {

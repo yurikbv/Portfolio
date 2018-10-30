@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="./css/style.min.css" type="text/css">
-  <script src="./img/svg.js"></script>
+  <script src="./js/svg.js"></script>
   <link rel="preload" href="./fonts/Roboto-Bold.woff2" type="font/woff2" as="font" crossorigin>
   <link rel="preload" href="./fonts/Roboto-Regular.woff2" type="font/woff2" as="font" crossorigin>
   <title>About</title>
@@ -19,21 +19,24 @@
   </script>
   <div class="wrapper">
     <section class="section hero">
+      <div class="hero__bg"><img class="hero__bg--image" src="img/bg/portfolio-mount.jpg"></div>
       <ul class="socials">
-        <li class="socials__item"><a class="socials__link" href=""><svg class="socials__image socials__image--vk" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <li class="socials__item"><a class="socials__link" href=""><svg class="socials__image socials__image--vk" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" width="undefinedpx" height="undefinedpx">
               <use xlink:href="#vk"></use>
             </svg></a></li>
-        <li class="socials__item"><a class="socials__link" href=""><svg class="socials__image socials__image--github" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <li class="socials__item"><a class="socials__link" href=""><svg class="socials__image socials__image--github" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" width="undefinedpx" height="undefinedpx">
               <use xlink:href="#github"></use>
             </svg></a></li>
-        <li class="socials__item"><a class="socials__link" href=""><svg class="socials__image socials__image--in" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <li class="socials__item"><a class="socials__link" href=""><svg class="socials__image socials__image--in" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" width="undefinedpx" height="undefinedpx">
               <use xlink:href="#in"></use>
             </svg></a></li>
-      </ul><a class="hamburger" href=""></a><a class="down-arrow" href=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      </ul><a class="hamburger" href=""><svg class="hamburger__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 40 35" width="undefinedpx" height="undefinedpx">
+          <use xlink:href="#hamburger"></use>
+        </svg></a><a class="down-arrow" href=""><svg class="down-arrow--image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 25.18 16.164" width="25px" height="16px">
           <use xlink:href="#arrow_down"></use>
         </svg></a>
-      <div class="hero__title"><svg class="section__title" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <use xlink:href="#about_header"></use>
+      <div class="hero__title"><svg class="section__title" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 1175.495 313.961" width="undefinedpx" height="undefinedpx">
+          <use xlink:href="#portfolio_header"></use>
         </svg>
         <div class="user hero__user-block">
           <div class="user__photo"><img src="./img/my.jpg"></div>
@@ -43,27 +46,38 @@
       </div>
     </section>
     <section class="section about">
-      <div class="about__left"><svg class="triangle triangle-fill-white"></svg>
-        <div class="title about__section--title">About Me</div>
-        <div class="user-about">
-          <div class="user-about__picture"></div>
-          <div class="user-about__title">
-            <div class="subtitle">Who I'm</div>
-          </div>
-          <div class="user-about__text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam aut consectetur consequuntur cumque cupiditate debitis deserunt ducimus ea eos esse expedita id maiores omnis quod repellat repudiandae totam, unde.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam aut consectetur consequuntur cumque cupiditate debitis deserunt ducimus ea eos esse expedita id maiores omnis quod repellat repudiandae totam, unde.</p>
+      <div class="about__left"><svg class="triangle triangle-fill-white about__triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+          <polygon points="0,0 0,100 1000,100"></polygon>
+        </svg>
+        <div class="about__section--wrapper">
+          <div class="title about__section--title">About Me<svg class="about__section--image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 498.161 175.44" width="357px" height="125px">
+              <use xlink:href="#about_header"></use>
+            </svg></div>
+          <div class="user-about">
+            <div class="user-about__picture"><img src="./img/155312_600.jpg"></div>
+            <div class="user-about__title">
+              <div class="subtitle">Who I'm</div>
+            </div>
+            <div class="user-about__text">
+              <p>Я веб разработчик из Новосибирска. Мне 27 лет.
+                Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и
+                современные проекты.</p>
+              <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+                Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="about__right"><svg class="triangle triangle-fill-beige"></svg>
+      <div class="about__right"><svg class="triangle triangle-fill-beige about__triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+          <polygon points="0,100 1000,100 1000,0"></polygon>
+        </svg>
         <div class="about-data">
           <div class="about-data__description about-user-info">
             <div class="about-user-info__title">
               <div class="subtitle">What I can be useful</div>
             </div>
             <div class="about-user-info__text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, quo.</p>
+              <p>Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</p>
             </div>
           </div>
           <div class="about-data__content">

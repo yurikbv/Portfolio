@@ -1,0 +1,21 @@
+{
+  "name": "HTML-Template",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "yurikbv <yurikb@yandex.ru>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/yurikbv/Portfolio",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "singularity": "^1.8.0"
+  }
+}

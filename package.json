@@ -21,6 +21,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-rsync": "^0.0.8",
     "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.0.9",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svg2string": "^0.3.0",
     "gulp-svgstore": "^7.0.0",

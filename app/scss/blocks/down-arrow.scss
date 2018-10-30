@@ -1,0 +1,9 @@
+.down-arrow{
+  bottom: 40px;
+  @include centered('x')
+}
+
+.down-arrow--image{
+  fill: #FFFFFF;
+  opacity: 0.7;
+}
