@@ -1,0 +1,12 @@
+footer.footer
+  .footer__menu
+    ul.nav-menu
+      each item in ["Authorizations","About Me","My Last Works"]
+        li.nav-menu__item
+          a(href="#").nav-menu__link= item
+  .footer__socials
+    ul.socials__list
+      each item in ['vk','github','in']
+        li.socials__item
+          a(href="#").socials__link
+            +image-svg("socials__image socials__image--" + item,item + '_round')

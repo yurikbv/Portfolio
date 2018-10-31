@@ -1,0 +1,14 @@
+.works-head{
+  text-align: center;
+  background-color: #faf8f0;
+}
+
+.works-head__triangle{
+  fill: #faf8f0;
+  &:first-of-type{
+    left: 0;
+  }
+  &:last-of-type{
+    right: 0;
+  }
+}

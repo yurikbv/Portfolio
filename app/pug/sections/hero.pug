@@ -1,0 +1,23 @@
+section.section.hero
+  .hero__bg
+    img(src="img/bg/portfolio-mount.jpg").hero__bg--image
+
+  ul.socials
+    each item in ['vk','github','in']
+      li.socials__item
+        a(href="#").socials__link
+          +image-svg("socials__image socials__image--" + item,item)
+
+  a(href="").hamburger
+    +image-svg("hamburger__image","hamburger","0 0 40 35")
+
+  a(href="").down-arrow
+    +image-svg("down-arrow--image","arrow_down","0 0 25.18 16.164",25,16)
+
+  .hero__title
+    +image-svg("hero__title--image","portfolio_header","0 0 1175.495 313.961")
+    .user.hero__user-block
+      .user__photo
+        img(src="./img/my.jpg")
+      .user__name Yuriy Bochkarev
+      .user__desc My Portfolio

@@ -14,6 +14,10 @@
   height: 22px;
   fill: #FFFFFF;
   opacity: .5;
+  transition: all 0.2s ease-in-out;
+  &:hover{
+    opacity: 1;
+  }
   &--vk{
     width: 31px;
   }
@@ -22,5 +26,21 @@
   }
   &--in{
     width: 24px;
+  }
+}
+
+.socials__list{
+  display: flex;
+  align-items: center;
+  .socials__link{
+    display: inline-block;
+    height: 35px;
+  }
+  .socials__item{
+    margin-left: 5px;
+  }
+  .socials__image{
+    width: 35px;
+    height: 35px;
   }
 }

@@ -21,7 +21,8 @@ const gulp           = require('gulp'),
     cheerio = require('gulp-cheerio'),            //Очищаем SVG
     svg2string = require('gulp-svg2string'),
     plumber = require('gulp-plumber'),            //Bыводит ошибки при сборке Gulp в виде системных сообщений
-    sassGlob = require('gulp-sass-glob');
+    sassGlob = require('gulp-sass-glob'),         //Подключает scss сразу папкой
+    cssunit = require('gulp-css-unit');           //Из px в rem
 
 
 gulp.task('pug', function() {
@@ -72,6 +73,10 @@ gulp.task('sass', function() {
   .pipe(gcmq())
   .pipe(sourcemaps.init())
   .pipe(autoprefixer(['last 2 versions']))
+  .pipe(cssunit({
+    type     :    'px-to-rem',
+    rootSize  :    16
+  }))
 	.pipe(gulp.dest('app/css'))
 	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(cleanCSS({level: 2}))

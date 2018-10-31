@@ -1,0 +1,40 @@
+extends ../main-layout
+
+block title
+  | Works
+
+block content
+
+  include ../sections/hero
+  section.section.works-head
+    svg(
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1000 100"
+    class="triangle works-head__triangle"
+    preserveAspectRatio="none")
+      polygon(points="0,0 0,100 1000,100")
+
+    svg(
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1000 100"
+    class="triangle works-head__triangle"
+    preserveAspectRatio="none")
+      polygon(points="0,100 1000,100 1000,0")
+    .title.section__title My Last Works
+
+  section.section.slider
+    .slider__desc
+      .slider__desc--info
+        .slider__desc--title
+          .block-title.subtitle Some site
+        .slider__desc--skills HTML,CSS,JavaScript
+        .slider__desc--btn
+          a(href="").btn Look Site
+        .slider__desc--btn
+          a(href="").btn PSD File
+    .slider__display
+      img(src="./img/1.png").slider__display--picture
+    .slider__buttons
+      a(href="#").slider__btn.slider__btn--prev
+      a(href="#").slider__btn.slider__btn--next
+  include ../sections/footer

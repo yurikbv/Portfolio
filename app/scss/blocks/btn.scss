@@ -1,0 +1,17 @@
+.btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.mountains{
+  .btn{
+    background-color: #00bfa5;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+      background-color: #009688;
+    }
+  }
+}

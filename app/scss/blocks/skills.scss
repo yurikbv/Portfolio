@@ -6,7 +6,6 @@
 
 .skills__item{
   margin-bottom: 30px;
-
 }
 
 .skill-section__list{
@@ -18,10 +17,15 @@
   margin-left: 20px;
 }
 
+.skill{
+  position: relative;
+}
+
 .skill__name{
   font-size: 13px;
   font-weight: 500;
-  line-height: 29.39px;
+  position: absolute;
+  @include centered()
 }
 
 .mountains{
@@ -31,8 +35,19 @@
 }
 
 .skill__circle{
-  width: 130px;
-  height: 130px;
-  border: 1px solid #00bfa5;
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: block;
+  fill: transparent;
+  stroke-width: 15px;
+}
+
+.skills__circle-under{
+  stroke: #dfdcd5;
+}
+
+.mountains {
+  .skills__circle-above{
+    stroke: #10c1a8;
+  }
 }

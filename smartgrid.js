@@ -10,18 +10,18 @@ let settings = {
   mobileFirst: false, /* mobileFirst ? 'min-width' : 'max-width' */
   tab: '  ',
   container: {
-    maxWidth: '1800px', /* max-width оn very large screen */
+    maxWidth: '1200px', /* max-width оn very large screen */
     fields: '30px' /* side fields */
   },
   breakPoints: {
-    w1200: {
+    laptop: {
       width: '1200px',
     },
-    iPad: {
+    tablet: {
       width: '768px',
     },
-    iPhone: {
-      width: '560px'
+    phone: {
+      width: '480px'
     }
   }
 };
