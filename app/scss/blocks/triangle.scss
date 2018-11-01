@@ -6,5 +6,18 @@
   }
   &-fill-beige{
     fill: $mount-beige;
+    @include tablet(fill,$mount-white);
+  }
+}
+
+.about__left{
+  .triangle{
+    left: 0;
+  }
+}
+
+.about__right{
+  .triangle{
+    right: 0;
   }
 }

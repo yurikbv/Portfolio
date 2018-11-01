@@ -22,8 +22,8 @@ const gulp           = require('gulp'),
     svg2string = require('gulp-svg2string'),
     plumber = require('gulp-plumber'),            //Bыводит ошибки при сборке Gulp в виде системных сообщений
     sassGlob = require('gulp-sass-glob'),         //Подключает scss сразу папкой
-    cssunit = require('gulp-css-unit');           //Из px в rem
-
+    cssunit = require('gulp-css-unit'),           //Из px в rem
+		babel = require('gulp-babel');
 
 gulp.task('pug', function() {
   let locals = require('./content');
@@ -48,8 +48,20 @@ gulp.task('js', function() {
 		// 'app/libs/jquery/dist/jquery.min.js',
 		'app/js/common.js'
 		])
+  .pipe(babel({
+    presets: ['@babel/env']
+  }))
+  .on('error', function(err) {
+    const message = err.message || '';
+    const errName = err.name || '';
+    const codeFrame = err.codeFrame || '';
+    gutil.log(gutil.colors.red.bold('[JS babel error]')+' '+ gutil.colors.bgRed(errName));
+    gutil.log(gutil.colors.bold('message:') +' '+ message);
+    gutil.log(gutil.colors.bold('codeframe:') + '\n' + codeFrame);
+    this.emit('end');
+  })
 	.pipe(concat('scripts.min.js'))
-	.pipe(uglify())
+	// .pipe(uglify())
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({stream: true}));
 });

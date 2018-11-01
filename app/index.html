@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/style.min.css" type="text/css">
+  <script src="./js/svg.js"></script>
+  <link rel="preload" href="./fonts/Roboto-Bold.woff2" type="font/woff2" as="font" crossorigin>
+  <link rel="preload" href="./fonts/Roboto-Regular.woff2" type="font/woff2" as="font" crossorigin>
+  <title>Hello</title>
+</head>
+
+<body class="mountains">
+  <div class="svg-placeholder"></div>
+  <script>
+    document.querySelector('.svg-placeholder').innerHTML = SVG_SPRITE
+  </script>
+  <div class="wrapper">
+    <div class="auth-container">
+      <div class="auth">
+        <div class="auth__info">
+          <div class="user">
+            <div class="user__photo"><img class="user__avatar" src="img/my.jpg" alt=""></div>
+            <div class="user__name">Yuriy Bochkarev</div>
+            <div class="user__title">My Site Portfolio</div>
+            <div class="auth__socals"><a class="auth__socals--link"><svg class="auth__socials--image auth__socials--github" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 30 30">
+                  <use xlink:href="#github"></use>
+                </svg></a><a class="auth__socals--link"><svg class="auth__socials--image auth__socials--upwork_round" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 30 30">
+                  <use xlink:href="#upwork_round"></use>
+                </svg></a></div>
+          </div>
+        </div>
+        <div class="auth__btns"><a class="auth__btn" href="#">My last Works</a><a class="auth__btn" href="#">About Me</a><a class="auth__btn" href="#">Change Theme</a></div>
+      </div>
+    </div>
+    <div class="auth__login"><button class="auth__login--link"> Authorizations</button></div>
+  </div>
+  <script src="./js/scripts.min.js"></script>
+</body>
+
+</html>

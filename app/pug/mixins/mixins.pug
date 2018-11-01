@@ -1,10 +1,10 @@
-mixin image-svg(addClass, link, viewBox, width, height)
+mixin image-svg(addClass, link, viewBox)
   svg(
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   class= addClass
   preserveAspectRatio="none"
   viewBox= viewBox
-  width=`${width}px`
-  height=`${height}px`)
+  width= width
+  height= height)
     use(xlink:href="#" + link)

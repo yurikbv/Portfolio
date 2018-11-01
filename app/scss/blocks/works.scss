@@ -3,6 +3,12 @@
   background-color: #faf8f0;
 }
 
+.works__section--image{
+  position: absolute;
+  opacity: .07;
+  @include centered();
+}
+
 .works-head__triangle{
   fill: #faf8f0;
   &:first-of-type{

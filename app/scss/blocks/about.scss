@@ -1,11 +1,18 @@
 .about{
   display: flex;
+  @include tablet-block{
+    flex-wrap: wrap;
+  }
 }
 
 .about__left,
 .about__right{
   flex: 1 1 50%;
   padding-bottom: 150px;
+  @include tablet-block{
+    flex-basis: 100%;
+    padding-bottom: 50px;
+  }
 }
 
 .about__left{
@@ -28,11 +35,15 @@
   top: 0;
   fill: #6E7171;
   opacity: 0.07;
+  width: 357px;
+  height: 125px;
+  @include laptop(left,20px);
 }
 
 .about__section--wrapper{
   text-align: center;
-  padding: 0 10%;
+  padding: 0 30px;
+  @include phone(padding, 0 15px);
 }
 
 .user-about__text{
@@ -44,10 +55,12 @@
 }
 
 .about-user-info__text{
-  padding-left: 40px;
+  padding: 0 30px;
+  @include phone(padding, 0 15px)
 }
 
 .about-data__content{
   margin-top: 50px;
-  padding: 0 10%;
+  padding: 0 30px;
+  @include phone(padding, 0 15px)
 }

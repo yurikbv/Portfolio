@@ -21,6 +21,7 @@ block content
     preserveAspectRatio="none")
       polygon(points="0,100 1000,100 1000,0")
     .title.section__title My Last Works
+      +image-svg("works__section--image","works_header","0 0 498.161 175.44",357,125)
 
   section.section.slider
     .slider__desc
@@ -28,13 +29,23 @@ block content
         .slider__desc--title
           .block-title.subtitle Some site
         .slider__desc--skills HTML,CSS,JavaScript
-        .slider__desc--btn
-          a(href="").btn Look Site
-        .slider__desc--btn
-          a(href="").btn PSD File
+        .slider__desc--buttons
+          .slider__desc--btn
+            a(href="").btn Look Site
+          .slider__desc--btn
+            a(href="").btn PSD File
     .slider__display
-      img(src="./img/1.png").slider__display--picture
-    .slider__buttons
-      a(href="#").slider__btn.slider__btn--prev
-      a(href="#").slider__btn.slider__btn--next
+      .slider__image
+        img(src="./img/1.png").slider__display--picture
+      .slider__buttons
+        button.slider__btn.slider__btn--prev
+          img(src="./img/mockup-tri.png").slider__btn--image
+          .shadow
+          +image-svg("slider__arrow","portf_arrow_down")
+        button.slider__btn.slider__btn--next
+          img(src="./img/mockup-yo.png").slider__btn--image
+          .shadow
+          +image-svg("slider__arrow","portf_arrow_up")
+
+  section.reviews
   include ../sections/footer

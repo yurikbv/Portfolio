@@ -1,7 +1,16 @@
 .footer{
-  padding: 0 5%;
+  padding: 0 30px;
   background-color: #373e42;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include tablet-block{
+    flex-wrap: wrap;
+    justify-content: center;
+    .footer__menu{
+      flex-basis: 100%;
+      text-align: center;
+    }
+  }
+  @include phone(padding, 0 15px)
 }

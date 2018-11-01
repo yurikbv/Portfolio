@@ -4,6 +4,7 @@
   top: 30px;
   display: flex;
   align-items: center;
+  @include phone(left,15px);
 }
 
 .socials__item{
@@ -18,15 +19,12 @@
   &:hover{
     opacity: 1;
   }
-  &--vk{
-    width: 31px;
-  }
   &--github{
     width: 26px;
   }
-  &--in{
-    width: 24px;
-  }
+  &--upwork{
+      width: 26px;
+    }
 }
 
 .socials__list{
@@ -42,5 +40,9 @@
   .socials__image{
     width: 35px;
     height: 35px;
+  }
+  .socials__image--upwork{
+    width: 40px;
+    height: 40px;
   }
 }

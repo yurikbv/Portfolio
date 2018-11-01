@@ -1,0 +1,25 @@
+extends ../main-layout
+
+block title
+  | Hello
+
+block content
+  .auth-container
+    .auth
+      .auth__info
+        .user
+          .user__photo
+            img(src="img/my.jpg", alt="").user__avatar
+          .user__name Yuriy Bochkarev
+          .user__title My Site Portfolio
+          .auth__socals
+            each icon in ['github', 'upwork_round']
+              a.auth__socals--link
+                +image-svg('auth__socials--image auth__socials--' + icon,icon,"0 0 30 30")
+      .auth__btns
+        a(href="#").auth__btn My last Works
+        a(href="#").auth__btn About Me
+        a(href="#").auth__btn Change Theme
+
+  .auth__login
+    button.auth__login--link  Authorizations

@@ -1,3 +1,9 @@
+.skills{
+  @include tablet-block{
+    text-align: center;
+  }
+}
+
 .skill-section__title{
   font-size: 28px;
   font-weight: 500;
@@ -9,16 +15,14 @@
 }
 
 .skill-section__list{
-  margin-top: 15px;
   display: flex;
-}
-
-.skill-section__item:nth-child(1n+2){
-  margin-left: 20px;
+  @include laptop(flex-wrap,wrap);
+  @include tablet(justify-content,center);
 }
 
 .skill{
   position: relative;
+  margin: 20px 0 0 20px;
 }
 
 .skill__name{

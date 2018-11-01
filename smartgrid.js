@@ -15,7 +15,7 @@ let settings = {
   },
   breakPoints: {
     laptop: {
-      width: '1200px',
+      width: '992px',
     },
     tablet: {
       width: '768px',

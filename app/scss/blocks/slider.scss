@@ -1,63 +1,119 @@
 .slider {
   display: flex;
-  flex-flow: column wrap;
-  height: 100vh;
+  min-height: 100vh;
+  @include tablet-block{
+    flex-wrap: wrap;
+  }
 }
 
 .slider__desc {
-  flex-basis: 100%;
+  flex-basis: 50%;
   display: flex;
+  background-color: #f0efe9;
+  @include tablet-block{
+    flex-basis: 100%;
+    order: 2;
+    padding-bottom: 300px;
+  };
 }
 
 .slider__display{
-  flex-grow: 4;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #efebe0;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @include tablet-block{
+    flex-basis: 100%;
+    order: 1;
+    display: block;
+    padding-bottom: 0;
+  };
 }
 
-.slider__buttons {
-  min-height: 100px;
+.slider__display--picture{
+  display: inline-block;
+  padding-bottom: 50px;
+  @include tablet-block{
+    width: 100%;
+  };
+  @include phone(padding-bottom,250px);
+}
+
+.slider__desc--info{
+  width: 420px;
+  margin: auto;
+  text-align: center;
+}
+
+.slider__desc--skills{
+  color: #20b5a1;
+  font-weight: 500;
+  padding: 20px 0;
+  border-top: 2px solid rgba(#009688,.3);
+  border-bottom: 2px solid rgba(#009688,.3);
+}
+
+.slider__desc--buttons{
+  margin-top: 40px;
+  text-align: center;
+}
+
+.slider__desc--btn{
+  width: 200px;
+  margin: 20px auto;
+    .btn{
+      width: 100%;
+    }
+}
+
+.slider__buttons{
   display: flex;
-  flex-grow: 1;
+  @include tablet-block{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 .slider__btn{
-  min-height: 100%;
-  flex: 1;
-  &--prev{
-    background: url("../img/down.jpg") center center no-repeat;
-    background-size: cover;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  flex-grow: 1;
+  cursor: pointer;
+  position: relative;
+  transition: all .3s ease-in-out;
+  &:hover{
+    .slider__arrow{
+      fill: rgba(#fff,7);
+    }
   }
-  &--next{
-    background: url("../img/up.jpg") center center no-repeat;
-    background-size: cover;
-  }
 }
 
-.slider__desc--title {
-  margin-bottom: 20px;
-}
-
-.slider__desc--skills {
-  padding: 20px 0;
-  border-top: 1px solid  #009688;
-  border-bottom: 1px solid #009688;
-  color: #20b5a1;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 40px;
-}
-
-.slider__desc--btn {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.slider__display--picture {
-  max-width: 100%;
+.slider__btn--image{
   display: block;
-  max-height: 100%;
+  width: 100%;
 }
 
-.slider__desc--info {
-  margin: auto;
+.shadow{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(black,.5);
+}
+
+.slider__arrow{
+  position: absolute;
+  @include centered();
+  width: 53px;
+  height: 34px;
+  fill: rgba(#fff,.5);
+  transition: all .3s ease-in-out;
 }

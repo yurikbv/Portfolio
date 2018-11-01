@@ -1,20 +1,43 @@
 .hero{
-  height: 600px;
+  min-height: 650px;
   overflow: hidden;
   color: #ffffff;
+  height: 100vh;
+}
+
+.hero__bg{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .hero__title{
-  @include centered('y');
   text-align: center;
   width: 100%;
-  padding: 0 5%;
+  padding: 0 30px;
 }
 
+.hero__title--image{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -160px;
+}
+
+
 .hero__user-block{
-  @include centered();
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -125px;
+  margin-top: -130px;
 }
 
 .hero__bg--image{
-  max-width: none;
+  max-width: 120%;
+  @include laptop(max-width,150%);
+  @include tablet(max-width,180%);
+  @include phone(max-width,250%);
 }
