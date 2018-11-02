@@ -2,7 +2,7 @@
 
 (function() {
 
-function parallax() {
+function parallax(target) {
   let parallaxContainer = document.querySelector('.parallax-mount'),
     layers = parallaxContainer.querySelectorAll('.parallax-mount__layer');
 
@@ -21,8 +21,9 @@ function parallax() {
       layer.style.transform = 'translate3d(' + positionX +'px, ' + positionY +'px, 0)';
     });
   };
-  document.querySelector('.hero').addEventListener('mousemove',moveLayer);
-  document.querySelector('.auth-container').addEventListener('mousemove',moveLayer);
+  if (document.querySelector('.auth-container')) {
+    document.querySelector('.auth-container').addEventListener('mousemove',moveLayer);
+  } else document.querySelector('.hero').addEventListener('mousemove',moveLayer);
 }
 parallax();
 })();
