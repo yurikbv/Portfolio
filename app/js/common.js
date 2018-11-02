@@ -1,28 +1,28 @@
 'use strict';
 
 (function() {
-  class Parallax {
-    constructor(){
-      this.bg = document.querySelector('.hero__bg');
-      this.user = document.querySelector('.hero__user-block');
-      this.sectionText = document.querySelector('.hero__title--image');
-      }
-    move(block, windowScroll, strafeAmount) {
-      let strafe = windowScroll / -strafeAmount + '%';
-      let transformString = 'translate3d(0,'+ strafe +', 0)';
-      let style = block.style;
-      style.transform = transformString;
-    }
-    init(wScroll) {
-      this.move(this.bg, wScroll, 40);
-      this.move(this.sectionText, wScroll, 50);
-      this.move(this.user, wScroll, 60);
-    }
-  }
-  let parallax = new Parallax();
-  window.onscroll = function () {
-    let vScroll = window.pageYOffset;
-    parallax.init(vScroll);
-  }
 
+function parallax() {
+  let parallaxContainer = document.querySelector('.parallax-mount'),
+    layers = parallaxContainer.querySelectorAll('.parallax-mount__layer');
+
+  let moveLayer = function(e){
+    let
+      initialX = (parallaxContainer.clientWidth / 2) - e.pageX,
+      initialY = (parallaxContainer.clientHeight / 2) - e.pageY;
+
+    Array.from(layers).forEach((layer,i) => {
+      let
+        devider = i / 100,
+        positionX = initialX * devider,
+        positionY = initialY * devider;
+
+      layer.style.bottom = '-' + parallaxContainer.clientHeight / 2 * devider + 'px';
+      layer.style.transform = 'translate3d(' + positionX +'px, ' + positionY +'px, 0)';
+    });
+  };
+  document.querySelector('.hero').addEventListener('mousemove',moveLayer);
+  document.querySelector('.auth-container').addEventListener('mousemove',moveLayer);
+}
+parallax();
 })();

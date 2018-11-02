@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet" href="./css/style.min.css" type="text/css")
+    title Mouse Parallax
+  body
+    .wrapper-parallax
+      .parallax#parallax
+       - for (var i = 1; i < 8; i++)
+        .parallax__layer
+          img(src="./img/parallax/layer-0" + i + ".png" class="parallax__image")
+    script(src="./js/parallaxMouse.js")

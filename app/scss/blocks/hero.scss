@@ -1,16 +1,45 @@
-.hero{
-  min-height: 650px;
-  overflow: hidden;
-  color: #ffffff;
-  height: 100vh;
+.mountains{
+  .hero{
+    min-height: 650px;
+    overflow: hidden;
+    color: #ffffff;
+    height: 100vh;
+  }
+
+  .hero__bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 
-.hero__bg{
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
+.desert{
+  .hero{
+    min-height: 650px;
+    overflow: hidden;
+    color: #ffffff;
+    height: 100vh;
+  }
+
+  .hero__bg{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 6112px;
+    background: url("../img/bg/sand.jpg") center left repeat-x;
+    animation: bg 120s linear infinite;
+  }
+}
+
+@keyframes bg {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-3056px);
+  }
 }
 
 .hero__title{
@@ -36,7 +65,7 @@
 }
 
 .hero__bg--image{
-  max-width: 120%;
+  max-width: 100%;
   @include laptop(max-width,150%);
   @include tablet(max-width,180%);
   @include phone(max-width,250%);
