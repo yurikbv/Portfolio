@@ -1,31 +1,32 @@
 .mountains{
-  .hero{
-    min-height: 650px;
-    overflow: hidden;
-    color: #ffffff;
-    height: 100vh;
-  }
-
   .hero__bg{
-    position: absolute;
-    left: 0;
     top: 0;
     right: 0;
     bottom: 0;
   }
+  .parallax-mount{
+    display: block;
+  }
+}
+
+.hero{
+  min-height: 650px;
+  overflow: hidden;
+  color: #ffffff;
+  height: 100vh;
+}
+
+.hero__bg{
+  position: absolute;
+  left: 0;
+}
+
+.parallax-mount{
+  display: none;
 }
 
 .desert{
-  .hero{
-    min-height: 650px;
-    overflow: hidden;
-    color: #ffffff;
-    height: 100vh;
-  }
-
   .hero__bg{
-    position: absolute;
-    left: 0;
     height: 100%;
     width: 6112px;
     background: url("../img/bg/sand.jpg") center left repeat-x;

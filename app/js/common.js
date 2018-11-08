@@ -2,7 +2,7 @@
 
 (function() {
 
-function parallax(target) {
+function parallax() {
   let parallaxContainer = document.querySelector('.parallax-mount'),
     layers = parallaxContainer.querySelectorAll('.parallax-mount__layer');
 

@@ -61,7 +61,7 @@ gulp.task('js', function() {
     this.emit('end');
   })
 	.pipe(concat('scripts.min.js'))
-	// .pipe(uglify())
+	.pipe(uglify())
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({stream: true}));
 });

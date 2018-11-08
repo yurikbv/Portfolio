@@ -481,31 +481,33 @@ img {
   fill: #fff;
 }
 
-.mountains .hero {
-  min-height: 40.625rem;
-  overflow: hidden;
-  color: #ffffff;
-  height: 100vh;
-}
-
 .mountains .hero__bg {
-  position: absolute;
-  left: 0;
   top: 0;
   right: 0;
   bottom: 0;
 }
 
-.desert .hero {
+.mountains .parallax-mount {
+  display: block;
+}
+
+.hero {
   min-height: 40.625rem;
   overflow: hidden;
   color: #ffffff;
   height: 100vh;
 }
 
-.desert .hero__bg {
+.hero__bg {
   position: absolute;
   left: 0;
+}
+
+.parallax-mount {
+  display: none;
+}
+
+.desert .hero__bg {
   height: 100%;
   width: 382rem;
   background: url("../img/bg/sand.jpg") center left repeat-x;
@@ -694,6 +696,10 @@ img {
 
 .mountains .skills__circle-above {
   stroke: #10c1a8;
+}
+
+.desert .skills__circle-above {
+  stroke: #e7a731;
 }
 
 .slider {
