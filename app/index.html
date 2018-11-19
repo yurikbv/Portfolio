@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/style.min.css" type="text/css">
   <script src="./js/svg.js"></script>
+  <script src="./js/activeTheme.js"></script>
   <link rel="preload" href="./fonts/Roboto-Bold.woff2" type="font/woff2" as="font" crossorigin>
   <link rel="preload" href="./fonts/Roboto-Regular.woff2" type="font/woff2" as="font" crossorigin>
   <title>Hello</title>
@@ -45,9 +46,15 @@
                 </svg></a></div>
           </div>
         </div>
-        <div class="auth__btns"><a class="auth__btn" href="works.html">My last Works</a><a class="auth__btn" href="about.html">About Me</a><a class="auth__btn" href="#">Change Theme</a></div>
+        <div class="auth__btns"><a class="auth__btn" href="works.html">My last Works</a><a class="auth__btn" href="about.html">About Me</a><button class="auth__btn change__btn">Change Theme</button></div>
       </div>
       <div class="auth__login"><button class="auth__login--link"> Authorizations</button></div>
+    </div>
+  </div>
+  <div class="preloader">
+    <div class="preloader__spinner">
+      <div class="preloader__animation"></div>
+      <div class="preloader__percents">0%</div>
     </div>
   </div>
   <script src="./js/scripts.min.js"></script>

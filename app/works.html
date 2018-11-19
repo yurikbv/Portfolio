@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/style.min.css" type="text/css">
   <script src="./js/svg.js"></script>
+  <script src="./js/activeTheme.js"></script>
   <link rel="preload" href="./fonts/Roboto-Bold.woff2" type="font/woff2" as="font" crossorigin>
   <link rel="preload" href="./fonts/Roboto-Regular.woff2" type="font/woff2" as="font" crossorigin>
   <title>Works</title>
@@ -77,21 +78,44 @@
         </div>
       </div>
       <div class="slider__display">
-        <div class="slider__image"><img class="slider__display--picture" src="./img/1.png"></div>
-        <div class="slider__buttons"><button class="slider__btn slider__btn--prev"><img class="slider__btn--image" src="./img/mockup-tri.png"><span class="shadow"></span><svg class="slider__arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
+        <div class="slider__image"><img class="slider__display--picture" src="./img/site-glow.png"></div>
+        <div class="slider__buttons">
+          <div class="slider__btn slider__btn--prev">
+            <div class="slider-btn__display">
+              <ul class="slider-btn__list">
+                <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-Bakery.png"></li>
+                <li class="slider-btn__item slider-btn__item--active"><img class="slider__btn--image" src="./img/site-film.png"></li>
+                <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-glow.png"></li>
+                <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-j-wood.png"></li>
+                <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-maker.png"></li>
+              </ul>
+            </div><span class="shadow"></span><svg class="slider__arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
               <use xlink:href="#portf_arrow_down"></use>
-            </svg></button><button class="slider__btn slider__btn--next"><img class="slider__btn--image" src="./img/mockup-yo.png"><span class="shadow"></span><svg class="slider__arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
+            </svg>
+          </div>
+          <div class="slider__btn slider__btn--next">
+            <div class="slider-btn__display">
+              <ul class="slider-btn__list">
+                <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-Bakery.png"></li>
+                <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-film.png"></li>
+                <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-glow.png"></li>
+                <li class="slider-btn__item slider-btn__item--active"><img class="slider__btn--image" src="./img/site-j-wood.png"></li>
+                <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-maker.png"></li>
+              </ul>
+            </div><span class="shadow"></span><svg class="slider__arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
               <use xlink:href="#portf_arrow_up"></use>
-            </svg></button></div>
+            </svg>
+          </div>
+        </div>
       </div>
     </section>
     <section class="reviews"></section>
     <footer class="footer">
       <div class="footer__menu">
         <ul class="nav-menu">
-          <li class="nav-menu__item"><a class="nav-menu__link" href="#">Hello Page</a></li>
-          <li class="nav-menu__item"><a class="nav-menu__link" href="#">About Me</a></li>
-          <li class="nav-menu__item"><a class="nav-menu__link" href="#">My Last Works</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" href="index.html">Welcome Page</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" href="about.html">About Me</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" href="works.html">My Last Works</a></li>
         </ul>
       </div>
       <div class="footer__socials">
@@ -105,6 +129,12 @@
         </ul>
       </div>
     </footer>
+  </div>
+  <div class="preloader">
+    <div class="preloader__spinner">
+      <div class="preloader__animation"></div>
+      <div class="preloader__percents">0%</div>
+    </div>
   </div>
   <script src="./js/scripts.min.js"></script>
 </body>

@@ -49,10 +49,36 @@
   stroke: #dfdcd5;
 }
 
+.skills__circle-above{
+  transform: rotate(-90deg);
+  transform-origin: 50px 50px;
+}
+
 .mountains {
   .skills__circle-above{
     stroke: #10c1a8;
   }
+  .skill__circle--HTML5{
+    @include dash(95);
+  }
+  .skill__circle--CSS3{
+    @include dash(95);
+  }
+  .skill__circle--JavaScript{
+    @include dash(60);
+  }
+  .skill__circle--PHP{
+    @include dash(20);
+  }
+  .skill__circle--mySQL{
+    @include dash(5);
+  }
+  [class*='skill__circle--Node']{
+    @include dash(35);
+  }
+  [class*='skill__circle--Mongo']{
+    @include dash(0);
+     }
 }
 
 .desert {

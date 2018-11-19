@@ -1,9 +1,11 @@
 footer.footer
   .footer__menu
     ul.nav-menu
-      each item in ["Hello Page","About Me","My Last Works"]
+      - var menuItem = ["Welcome Page","About Me","My Last Works"]
+      - var menuLink = ["index", "about" , "works"]
+      - for (var i = 0; i < menuItem.length; i++)
         li.nav-menu__item
-          a(href="#").nav-menu__link= item
+          a(href=`${menuLink[i]}.html`).nav-menu__link= menuItem[i]
   .footer__socials
     ul.socials__list
       each item in ['github', 'upwork']

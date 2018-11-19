@@ -60,7 +60,7 @@ block content
                       each skillTitle in skillArray
                         li.skill-section__item
                           .skill
-                            svg.skill__circle(viewBox="0 0 100 100" preserveAspectRatio="none")
+                            svg(viewBox="0 0 100 100" preserveAspectRatio="none" class="skill__circle skill__circle--" + skillTitle)
                               circle.skills__circle-under(cx="50" cy="50" r="40")
                               circle.skills__circle-above(cx="50" cy="50" r="40")
                             .skill__name= skillTitle

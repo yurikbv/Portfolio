@@ -38,13 +38,24 @@
 .parallax-mount__layer{
   height: 100%;
   position: absolute;
-  width: 110%;
+  width: 120%;
   left: 50%;
-  margin-left: -55%;
+  margin-left: -60%;
+  @include laptop-block{
+       width: 130%;
+       margin-left: -75%;
+     }
+  @include tablet-block{
+    width: 250%;
+    margin-left: -125%;
+  }
+  @include phone-block{
+    width: 330%;
+    margin-left: -175%;
+  }
 }
 
 .parallax-mount__image{
-  height: auto ;
   width: 100%;
   position: absolute;
   bottom: 0;

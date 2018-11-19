@@ -46,7 +46,8 @@ gulp.task('pug', function() {
 gulp.task('js', function() {
 	return gulp.src([
 		// 'app/libs/jquery/dist/jquery.min.js',
-		'app/js/common.js'
+		'app/js/common.js',
+		'app/js/preloader.js',
 		])
   .pipe(babel({
     presets: ['@babel/env']

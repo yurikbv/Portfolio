@@ -36,14 +36,37 @@ block content
             a(href="").btn PSD File
     .slider__display
       .slider__image
-        img(src="./img/1.png").slider__display--picture
+        img(src="./img/site-glow.png").slider__display--picture
+
       .slider__buttons
-        button.slider__btn.slider__btn--prev
-          img(src="./img/mockup-tri.png").slider__btn--image
+        .slider__btn.slider__btn--prev
+          .slider-btn__display
+            ul.slider-btn__list
+              li.slider-btn__item
+                img(src="./img/site-Bakery.png").slider__btn--image
+              li.slider-btn__item.slider-btn__item--active
+                img(src="./img/site-film.png").slider__btn--image
+              li.slider-btn__item
+                img(src="./img/site-glow.png").slider__btn--image
+              li.slider-btn__item
+                img(src="./img/site-j-wood.png").slider__btn--image
+              li.slider-btn__item
+                img(src="./img/site-maker.png").slider__btn--image
           span.shadow
           +image-svg("slider__arrow","portf_arrow_down")
-        button.slider__btn.slider__btn--next
-          img(src="./img/mockup-yo.png").slider__btn--image
+        .slider__btn.slider__btn--next
+          .slider-btn__display
+            ul.slider-btn__list
+              li.slider-btn__item
+                img(src="./img/site-Bakery.png").slider__btn--image
+              li.slider-btn__item
+                img(src="./img/site-film.png").slider__btn--image
+              li.slider-btn__item
+                img(src="./img/site-glow.png").slider__btn--image
+              li.slider-btn__item.slider-btn__item--active
+                img(src="./img/site-j-wood.png").slider__btn--image
+              li.slider-btn__item
+                img(src="./img/site-maker.png").slider__btn--image
           span.shadow
           +image-svg("slider__arrow","portf_arrow_up")
 

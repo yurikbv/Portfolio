@@ -14,3 +14,9 @@
     transform: translateY(-50%);
   }
 }
+
+@mixin dash($percentage){
+  .skills__circle-above{
+    stroke-dasharray: 251/100*$percentage, 251.32;
+  }
+}

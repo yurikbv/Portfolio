@@ -26,6 +26,15 @@
   }
 }
 
+.auth__info {
+  padding: 40px 70px;
+  background: rgba(#fcfcfc, .85);
+}
+
+.auth__btns {
+  display: flex;
+}
+
 .user__photo {
   display: inline-block;
   border-radius: 50%;
@@ -37,16 +46,6 @@
     max-width: 100%;
     max-height: 100%;
   }
-}
-
-.auth__info {
-  position: relative;
-  padding: 40px 70px;
-  background: rgba(#fcfcfc, .85);
-}
-
-.auth__btns {
-  display: flex;
 }
 
 .auth__btn {
