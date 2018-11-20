@@ -78,19 +78,30 @@
         </div>
       </div>
       <div class="slider__display">
-        <div class="slider__image"><img class="slider__display--picture" src="./img/site-glow.png"></div>
+        <div class="slideshow">
+          <div class="slideshow__display">
+            <div class="slideshow__preloader"></div><img class="slideshow__display-pic" src="./img/site-Bakery.png">
+          </div>
+          <ul class="slideshow__list">
+            <li class="slideshow__item slideshow__item--active"><a class="slideshow__link" href="./img/site-Bakery.png"><img class="slideshow__image" src="./img/site-Bakery.png"></a></li>
+            <li class="slideshow__item"><a class="slideshow__link" href="./img/site-film.png"><img class="slideshow__image" src="./img/site-film.png"></a></li>
+            <li class="slideshow__item"><a class="slideshow__link" href="./img/site-glow.png"><img class="slideshow__image" src="./img/site-glow.png"></a></li>
+            <li class="slideshow__item"><a class="slideshow__link" href="./img/site-j-wood.png"><img class="slideshow__image" src="./img/site-j-wood.png"></a></li>
+            <li class="slideshow__item"><a class="slideshow__link" href="./img/site-maker.png"><img class="slideshow__image" src="./img/site-maker.png"></a></li>
+          </ul>
+        </div>
         <div class="slider__buttons">
           <div class="slider__btn slider__btn--prev">
             <div class="slider-btn__display">
               <ul class="slider-btn__list">
-                <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-Bakery.png"></li>
-                <li class="slider-btn__item slider-btn__item--active"><img class="slider__btn--image" src="./img/site-film.png"></li>
+                <li class="slider-btn__item slider-btn__item--active"><img class="slider__btn--image" src="./img/site-Bakery.png"></li>
+                <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-film.png"></li>
                 <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-glow.png"></li>
                 <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-j-wood.png"></li>
                 <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-maker.png"></li>
               </ul>
-            </div><span class="shadow"></span><svg class="slider__arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
-              <use xlink:href="#portf_arrow_down"></use>
+            </div><span class="shadow shadow__prev"></span><svg class="slider__arrow slider__arrow--prev" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
+              <use xlink:href="#portf_arrow_up"></use>
             </svg>
           </div>
           <div class="slider__btn slider__btn--next">
@@ -98,12 +109,12 @@
               <ul class="slider-btn__list">
                 <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-Bakery.png"></li>
                 <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-film.png"></li>
-                <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-glow.png"></li>
-                <li class="slider-btn__item slider-btn__item--active"><img class="slider__btn--image" src="./img/site-j-wood.png"></li>
+                <li class="slider-btn__item slider-btn__item--active"><img class="slider__btn--image" src="./img/site-glow.png"></li>
+                <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-j-wood.png"></li>
                 <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-maker.png"></li>
               </ul>
-            </div><span class="shadow"></span><svg class="slider__arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
-              <use xlink:href="#portf_arrow_up"></use>
+            </div><span class="shadow shadow__next"></span><svg class="slider__arrow slider__arrow--next" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
+              <use xlink:href="#portf_arrow_down"></use>
             </svg>
           </div>
         </div>
@@ -136,6 +147,7 @@
       <div class="preloader__percents">0%</div>
     </div>
   </div>
+  <!--script(src="./libs/jQuery/dist/jquery.min.js")-->
   <script src="./js/scripts.min.js"></script>
 </body>
 

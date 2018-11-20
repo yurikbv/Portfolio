@@ -48,6 +48,9 @@ gulp.task('js', function() {
 		// 'app/libs/jquery/dist/jquery.min.js',
 		'app/js/common.js',
 		'app/js/preloader.js',
+		'app/js/slider.js',
+    // 'app/js/sliderJQuery.js',
+    // 'app/js/slideshowJQuery.js'
 		])
   .pipe(babel({
     presets: ['@babel/env']
