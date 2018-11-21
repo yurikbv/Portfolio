@@ -40,9 +40,13 @@
         <li class="socials__item"><a class="socials__link" href="#"><svg class="socials__image socials__image--upwork" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
               <use xlink:href="#upwork"></use>
             </svg></a></li>
-      </ul><a class="hamburger" href=""><svg class="hamburger__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 40 35">
-          <use xlink:href="#hamburger"></use>
-        </svg></a><a class="down-arrow" href=""><svg class="down-arrow--image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 25.18 16.164">
+      </ul>
+      <div class="hamburger" tabindex="1"><button class="hamburger__button"></button></div>
+      <ul class="menu-header__list">
+        <li class="menu-header__item"><a class="menu-header__link" href="./index.html">Welcome Page</a></li>
+        <li class="menu-header__item"><a class="menu-header__link" href="./about.html">About Me</a></li>
+        <li class="menu-header__item"><a class="menu-header__link" href="./works.html">My Last Works</a></li>
+      </ul><a class="down-arrow" href=""><svg class="down-arrow--image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 25.18 16.164">
           <use xlink:href="#arrow_down"></use>
         </svg></a>
       <div class="hero__title"><svg class="hero__title--image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 1175.495 313.961">
@@ -66,38 +70,70 @@
     </section>
     <section class="section slider">
       <div class="slider__desc">
-        <div class="slider__desc--info">
-          <div class="slider__desc--title">
-            <div class="block-title subtitle">Some site</div>
-          </div>
-          <div class="slider__desc--skills">HTML,CSS,JavaScript</div>
-          <div class="slider__desc--buttons">
-            <div class="slider__desc--btn"><a class="btn" href="">Look Site</a></div>
-            <div class="slider__desc--btn"><a class="btn" href="">PSD File</a></div>
-          </div>
-        </div>
+        <ul class="slider__desc--info">
+          <li class="slider__desc--item">
+            <div class="slider__desc--title">
+              <div class="block-title subtitle">Bakery</div>
+            </div>
+            <div class="slider__desc--skills">HTML,CSS,JavaScript</div>
+            <div class="slider__desc--buttons">
+              <div class="slider__desc--btn"><a class="btn" href="./Bakery/index.html" target="_blank">Look Site</a></div>
+              <div class="slider__desc--btn"><a class="btn" href="https://drive.google.com/open?id=1-7ENOv-rVZbuv_ltW6m6MwkWkQsILFCm" target="_blank">PSD File</a></div>
+            </div>
+          </li>
+          <li class="slider__desc--item slider__desc--active">
+            <div class="slider__desc--title">
+              <div class="block-title subtitle">Glow</div>
+            </div>
+            <div class="slider__desc--skills">HTML, CSS, JavaScript, PSD to HTML</div>
+            <div class="slider__desc--buttons">
+              <div class="slider__desc--btn"><a class="btn" href="./glow/index.html" target="_blank">Look Site</a></div>
+              <div class="slider__desc--btn"><a class="btn" href="https://drive.google.com/open?id=18KbRDPxeYj_AclpJv4ZgeqoElzj2IP1l" target="_blank">PSD File</a></div>
+            </div>
+          </li>
+          <li class="slider__desc--item">
+            <div class="slider__desc--title">
+              <div class="block-title subtitle">J-Wood</div>
+            </div>
+            <div class="slider__desc--skills">HTML,CSS,JavaScript</div>
+            <div class="slider__desc--buttons">
+              <div class="slider__desc--btn"><a class="btn" href="./j-wood/index.html" target="_blank">Look Site</a></div>
+              <div class="slider__desc--btn"><a class="btn" href="https://drive.google.com/open?id=1CZQ-NKx17iobKY2HR7-YyIoJog7IoO-Z" target="_blank">PSD File</a></div>
+            </div>
+          </li>
+          <li class="slider__desc--item">
+            <div class="slider__desc--title">
+              <div class="block-title subtitle">Films</div>
+            </div>
+            <div class="slider__desc--skills">HTML,CSS,JavaScript</div>
+            <div class="slider__desc--buttons">
+              <div class="slider__desc--btn"><a class="btn" href="./Films/index.html" target="_blank">Look Site</a></div>
+            </div>
+          </li>
+          <li class="slider__desc--item">
+            <div class="slider__desc--title">
+              <div class="block-title subtitle">Maker</div>
+            </div>
+            <div class="slider__desc--skills">HTML,CSS,JavaScript</div>
+            <div class="slider__desc--buttons">
+              <div class="slider__desc--btn"><a class="btn" href="./maker/index.html" target="_blank">Look Site</a></div>
+              <div class="slider__desc--btn"><a class="btn" href="https://drive.google.com/open?id=1C8Ln3hz2RQvuhn_6lpd7ell7YONsiVhK" target="_blank">PSD File</a></div>
+            </div>
+          </li>
+        </ul>
       </div>
       <div class="slider__display">
         <div class="slideshow">
-          <div class="slideshow__display">
-            <div class="slideshow__preloader"></div><img class="slideshow__display-pic" src="./img/site-Bakery.png">
-          </div>
-          <ul class="slideshow__list">
-            <li class="slideshow__item slideshow__item--active"><a class="slideshow__link" href="./img/site-Bakery.png"><img class="slideshow__image" src="./img/site-Bakery.png"></a></li>
-            <li class="slideshow__item"><a class="slideshow__link" href="./img/site-film.png"><img class="slideshow__image" src="./img/site-film.png"></a></li>
-            <li class="slideshow__item"><a class="slideshow__link" href="./img/site-glow.png"><img class="slideshow__image" src="./img/site-glow.png"></a></li>
-            <li class="slideshow__item"><a class="slideshow__link" href="./img/site-j-wood.png"><img class="slideshow__image" src="./img/site-j-wood.png"></a></li>
-            <li class="slideshow__item"><a class="slideshow__link" href="./img/site-maker.png"><img class="slideshow__image" src="./img/site-maker.png"></a></li>
-          </ul>
+          <div class="slideshow__display"><a class="slideshow__link" href="./Bakery/index.html" target="_blank"><img class="slideshow__display-pic" src="./img/site-Bakery.png"></a><a class="slideshow__link slideshow__link--active" href="./glow/index.html" target="_blank"><img class="slideshow__display-pic slideshow__display-pic--active" src="./img/site-glow.png"></a><a class="slideshow__link" href="./j-wood/index.html" target="_blank"><img class="slideshow__display-pic" src="./img/site-j-wood.png"></a><a class="slideshow__link" href="./Films/index.html" target="_blank"><img class="slideshow__display-pic" src="./img/site-film.png"></a><a class="slideshow__link" href="./maker/index.html" target="_blank"><img class="slideshow__display-pic" src="./img/site-maker.png"></a></div>
         </div>
         <div class="slider__buttons">
           <div class="slider__btn slider__btn--prev">
             <div class="slider-btn__display">
               <ul class="slider-btn__list">
                 <li class="slider-btn__item slider-btn__item--active"><img class="slider__btn--image" src="./img/site-Bakery.png"></li>
-                <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-film.png"></li>
                 <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-glow.png"></li>
                 <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-j-wood.png"></li>
+                <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-film.png"></li>
                 <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-maker.png"></li>
               </ul>
             </div><span class="shadow shadow__prev"></span><svg class="slider__arrow slider__arrow--prev" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
@@ -108,9 +144,9 @@
             <div class="slider-btn__display">
               <ul class="slider-btn__list">
                 <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-Bakery.png"></li>
+                <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-glow.png"></li>
+                <li class="slider-btn__item slider-btn__item--active"><img class="slider__btn--image" src="./img/site-j-wood.png"></li>
                 <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-film.png"></li>
-                <li class="slider-btn__item slider-btn__item--active"><img class="slider__btn--image" src="./img/site-glow.png"></li>
-                <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-j-wood.png"></li>
                 <li class="slider-btn__item"><img class="slider__btn--image" src="./img/site-maker.png"></li>
               </ul>
             </div><span class="shadow shadow__next"></span><svg class="slider__arrow slider__arrow--next" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
@@ -124,9 +160,9 @@
     <footer class="footer">
       <div class="footer__menu">
         <ul class="nav-menu">
-          <li class="nav-menu__item"><a class="nav-menu__link" href="index.html">Welcome Page</a></li>
-          <li class="nav-menu__item"><a class="nav-menu__link" href="about.html">About Me</a></li>
-          <li class="nav-menu__item"><a class="nav-menu__link" href="works.html">My Last Works</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" href="./index.html">Welcome Page</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" href="./about.html">About Me</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" href="./works.html">My Last Works</a></li>
         </ul>
       </div>
       <div class="footer__socials">

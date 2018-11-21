@@ -49,6 +49,7 @@ gulp.task('js', function() {
 		'app/js/common.js',
 		'app/js/preloader.js',
 		'app/js/slider.js',
+		'app/js/hamburger.js'
     // 'app/js/sliderJQuery.js',
     // 'app/js/slideshowJQuery.js'
 		])

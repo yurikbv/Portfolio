@@ -26,9 +26,14 @@ section.section.hero
         a(href="#").socials__link
           +image-svg("socials__image socials__image--" + item,item)
 
-  a(href="").hamburger
-    +image-svg("hamburger__image","hamburger","0 0 40 35")
-
+  .hamburger(tabindex="1")
+    button.hamburger__button
+  ul.menu-header__list
+    - var menuItem = ["Welcome Page","About Me","My Last Works"]
+    - var menuLink = ["index", "about" , "works"]
+    - for (var i = 0; i < menuItem.length; i++)
+      li.menu-header__item
+        a(href=`./${menuLink[i]}.html`).menu-header__link= menuItem[i]
   a(href="").down-arrow
     +image-svg("down-arrow--image","arrow_down","0 0 25.18 16.164")
 

@@ -25,36 +25,52 @@ block content
 
   section.section.slider
     .slider__desc
-      .slider__desc--info
-        .slider__desc--title
-          .block-title.subtitle Some site
-        .slider__desc--skills HTML,CSS,JavaScript
-        .slider__desc--buttons
-          .slider__desc--btn
-            a(href="").btn Look Site
-          .slider__desc--btn
-            a(href="").btn PSD File
+      ul.slider__desc--info
+        - var title = ['Bakery', 'Glow', 'J-Wood', 'Films', 'Maker']
+        - var links = ['Bakery', 'glow', 'j-wood', 'Films', 'maker']
+        - var linksPSD = ['https://drive.google.com/open?id=1-7ENOv-rVZbuv_ltW6m6MwkWkQsILFCm', 'https://drive.google.com/open?id=18KbRDPxeYj_AclpJv4ZgeqoElzj2IP1l', 'https://drive.google.com/open?id=1CZQ-NKx17iobKY2HR7-YyIoJog7IoO-Z', '', 'https://drive.google.com/open?id=1C8Ln3hz2RQvuhn_6lpd7ell7YONsiVhK']
+        -for (var i = 0; i < title.length; i++)
+          if i === 1
+            li.slider__desc--item.slider__desc--active
+              .slider__desc--title
+                .block-title.subtitle= title[i]
+              .slider__desc--skills HTML, CSS, JavaScript, PSD to HTML
+              .slider__desc--buttons
+                .slider__desc--btn
+                  a(href='./' + links[i] + '/index.html' target="_blank").btn Look Site
+                .slider__desc--btn
+                  a(href=linksPSD[i] target="_blank").btn PSD File
+          else
+            li.slider__desc--item
+              .slider__desc--title
+                .block-title.subtitle= title[i]
+              .slider__desc--skills HTML,CSS,JavaScript
+              .slider__desc--buttons
+                if i === 3
+                  .slider__desc--btn
+                    a(href='./' + links[i] + '/index.html' target="_blank").btn Look Site
+                else
+                  .slider__desc--btn
+                    a(href='./' + links[i] + '/index.html' target="_blank").btn Look Site
+                  .slider__desc--btn
+                    a(href=linksPSD[i] target="_blank").btn PSD File
     .slider__display
       .slideshow
         .slideshow__display
-          .slideshow__preloader
-          img.slideshow__display-pic(src="./img/site-Bakery.png")
-        ul.slideshow__list
-          - var images = ['./img/site-Bakery.png','./img/site-film.png','./img/site-glow.png','./img/site-j-wood.png','./img/site-maker.png']
+          - var images = ['./img/site-Bakery.png','./img/site-glow.png','./img/site-j-wood.png','./img/site-film.png','./img/site-maker.png']
+          - var links = ['Bakery', 'glow', 'j-wood', 'Films', 'maker']
           - for (var i = 0; i < images.length; i++)
-            if i === 0
-              li(class="slideshow__item slideshow__item--active")
-                a.slideshow__link(href=images[i])
-                  img.slideshow__image(src=images[i])
+            if i === 1
+              a.slideshow__link.slideshow__link--active(href='./' + links[i] + '/index.html' target="_blank")
+                img.slideshow__display-pic.slideshow__display-pic--active(src=images[i])
             else
-              li(class="slideshow__item")
-                a.slideshow__link(href=images[i])
-                  img.slideshow__image(src=images[i])
+              a.slideshow__link(href='./' + links[i] + '/index.html' target="_blank")
+                img.slideshow__display-pic(src=images[i])
       .slider__buttons
         .slider__btn.slider__btn--prev
           .slider-btn__display
             ul.slider-btn__list
-              - var images = ['./img/site-Bakery.png','./img/site-film.png','./img/site-glow.png','./img/site-j-wood.png','./img/site-maker.png']
+              - var images = ['./img/site-Bakery.png','./img/site-glow.png','./img/site-j-wood.png','./img/site-film.png','./img/site-maker.png']
               - for (var i = 0; i < images.length; i++)
                 if i === 0
                   li(class="slider-btn__item slider-btn__item--active")
@@ -67,7 +83,7 @@ block content
         .slider__btn.slider__btn--next
           .slider-btn__display
             ul.slider-btn__list
-              - var images = ['./img/site-Bakery.png','./img/site-film.png','./img/site-glow.png','./img/site-j-wood.png','./img/site-maker.png']
+              - var images = ['./img/site-Bakery.png','./img/site-glow.png','./img/site-j-wood.png','./img/site-film.png','./img/site-maker.png']
               - for (var i = 0; i < images.length; i++)
                 if i === 2
                   li(class="slider-btn__item slider-btn__item--active")

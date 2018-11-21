@@ -1,13 +1,105 @@
 .hamburger{
   position: absolute;
-  right: 30px;
-  top: 25px;
   display: inline-block;
-  width: 40px;
-  height: 35px;
-  @include phone(right,15px);
+  right: 45px;
+  top: 40px;
+  z-index: 99;
+  width: 48px;
+  height: 47px;
+  cursor: pointer;
+  &.hamburger__opened{
+    .hamburger__button{
+      transition: all .3s ease-in-out;
+      background-color: transparent;
+      border-radius: 5px;
+    }
+    .hamburger__button:before{
+      transition: all .3s ease-in-out;
+      transform: rotate(45deg);
+      top: 0;
+    }
+    .hamburger__button:after{
+      transition: all .3s ease-in-out;
+      transform: rotate(-45deg);
+      top: 0;
+    }
+  }
+  &.hamburger__opened ~ .menu-header__list{
+    display: block;
+  }
 }
 
-.hamburger__image{
-  fill: #fff;
+.hamburger__button {
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  height: 4px;
+  top: 22px;
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  &:before, &:after {
+    transition: all .3s linear;
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    right: 0;
+    background-color: #fff;
+  }
+  &:before {
+    top: 15px;
+  }
+  &:after {
+    bottom: 15px;
+  }
+}
+
+.menu-header__list {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(#00bfa5,.87);
+  transition: all .3ms ease-in-out;
+  z-index: 98;
+  display: none;
+}
+
+.menu-header__link {
+  text-decoration: none;
+  font-family: "Bernier",sans-serif;
+  padding: 25px 80px;
+  transition: all .3s ease-in-out;
+  font-size: 63px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 400;
+  position: relative;
+  @include tablet(font-size,45px);
+  @include phone(font-size,40px);
+  &:hover {
+    &:after,
+    &:before{
+      transition: all .3s ease-in-out;
+      background-color: rgba(#fff,1);
+    }
+  }
+  &:after,
+  &:before{
+    content: '';
+    display: block;
+    @include centered(y);
+    width: 22px;
+    height: 5px;
+    background-color: rgba(#fff,0);
+  }
+  &:after{
+    right: 40px;
+  }
+  &:before{
+    left: 40px;
+  }
 }
