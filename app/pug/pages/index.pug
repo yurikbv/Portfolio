@@ -27,21 +27,46 @@ block content
           img(src="./img/parallax-mount/Layer1-1.png" class="parallax-mount__image")
 
     .auth
-      .auth__side
-        .auth__info
-          .user
-            .user__photo
-              img(src="img/my.jpg", alt="").user__avatar
-            .user__name Yuriy Bochkarev
-            .user__title My Site Portfolio
-            .auth__socals
-              each icon in ['github', 'upwork_round']
-                a.auth__socals--link
-                  +image-svg('auth__socials--image auth__socials--' + icon,icon,"0 0 30 30")
-        .auth__btns
-          a(href="works.html").auth__btn My last Works
-          a(href="about.html").auth__btn About Me
-          button.auth__btn.change__btn Change Theme
-      .auth__side-back
+      .auth__card
+        .auth__side--front
+          .auth__info
+            .user
+              .user__photo
+                img(src="img/my.jpg", alt="").user__avatar
+              .user__name Yuriy Bochkarev
+              .user__title My Site Portfolio
+              .auth__socals
+                each icon in ['github', 'upwork_round']
+                  a.auth__socals--link
+                    +image-svg('auth__socials--image auth__socials--' + icon,icon,"0 0 30 30")
+          .auth__btns
+            a(href="works.html").auth__btn My last Works
+            a(href="about.html").auth__btn About Me
+            button.auth__btn.change__btn Change Theme
+        .auth__side--back
+          .subtitle Authorizations
+          form.auth__form
+            label(for="login")
+              input(type="text" placeholder="Login" id="login" required)
+              +image-svg('svg-login', 'login', '0 0 15 15')
+            label(for="password")
+              input(type="password" placeholder="Password" id="password" required)
+              +image-svg('svg-password', 'password', '0 0 15 15')
+            label(for="human")
+              input(type="checkbox" id="human" required)
+              +image-svg('human-check', 'check',"0 0 20 15")
+              | I'm not Robot.
+            span Are you sure?
+            label(for="sure-yes")
+              input(type="radio" id="sure-yes" name="sure")
+              i.circle
+              | Yes
+            label(for="sure-no")
+              input(type="radio" id="sure-no" name="sure")
+              i.circle
+              | I don't know
+            .auth__btns
+              button.auth__btn.auth__btn--back Back
+              button(type="submit").auth__btn Log in
     .auth__login
       button.auth__login--link  Authorizations

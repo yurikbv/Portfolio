@@ -15,9 +15,7 @@
 
 <body class="mountains">
   <div class="svg-placeholder"></div>
-  <script>
-    document.querySelector('.svg-placeholder').innerHTML = SVG_SPRITE
-  </script>
+  <script>document.querySelector('.svg-placeholder').innerHTML = SVG_SPRITE</script>
   <div class="wrapper">
     <div class="auth-container">
       <div class="hero__bg">
@@ -34,22 +32,35 @@
         </div>
       </div>
       <div class="auth">
-        <div class="auth__side">
-          <div class="auth__info">
-            <div class="user">
-              <div class="user__photo"><img class="user__avatar" src="img/my.jpg" alt=""></div>
-              <div class="user__name">Yuriy Bochkarev</div>
-              <div class="user__title">My Site Portfolio</div>
-              <div class="auth__socals"><a class="auth__socals--link"><svg class="auth__socials--image auth__socials--github" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 30 30">
-                    <use xlink:href="#github"></use>
-                  </svg></a><a class="auth__socals--link"><svg class="auth__socials--image auth__socials--upwork_round" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 30 30">
-                    <use xlink:href="#upwork_round"></use>
-                  </svg></a></div>
+        <div class="auth__card">
+          <div class="auth__side--front">
+            <div class="auth__info">
+              <div class="user">
+                <div class="user__photo"><img class="user__avatar" src="img/my.jpg" alt=""></div>
+                <div class="user__name">Yuriy Bochkarev</div>
+                <div class="user__title">My Site Portfolio</div>
+                <div class="auth__socals"><a class="auth__socals--link"><svg class="auth__socials--image auth__socials--github" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 30 30">
+                      <use xlink:href="#github"></use>
+                    </svg></a><a class="auth__socals--link"><svg class="auth__socials--image auth__socials--upwork_round" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 30 30">
+                      <use xlink:href="#upwork_round"></use>
+                    </svg></a></div>
+              </div>
             </div>
+            <div class="auth__btns"><a class="auth__btn" href="works.html">My last Works</a><a class="auth__btn" href="about.html">About Me</a><button class="auth__btn change__btn">Change Theme</button></div>
           </div>
-          <div class="auth__btns"><a class="auth__btn" href="works.html">My last Works</a><a class="auth__btn" href="about.html">About Me</a><button class="auth__btn change__btn">Change Theme</button></div>
+          <div class="auth__side--back">
+            <div class="subtitle">Authorizations</div>
+            <form class="auth__form"><label for="login"><input type="text" placeholder="Login" id="login" required><svg class="svg-login" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 15 15">
+                  <use xlink:href="#login"></use>
+                </svg></label><label for="password"><input type="password" placeholder="Password" id="password" required><svg class="svg-password" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 15 15">
+                  <use xlink:href="#password"></use>
+                </svg></label><label for="human"><input type="checkbox" id="human" required><svg class="human-check" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 20 15">
+                  <use xlink:href="#check"></use>
+                </svg>I'm not Robot.</label><span>Are you sure?</span><label for="sure-yes"><input type="radio" id="sure-yes" name="sure"><i class="circle"></i>Yes</label><label for="sure-no"><input type="radio" id="sure-no" name="sure"><i class="circle"></i>I don't know</label>
+              <div class="auth__btns"><button class="auth__btn auth__btn--back">Back</button><button class="auth__btn" type="submit">Log in</button></div>
+            </form>
+          </div>
         </div>
-        <div class="auth__side-back"></div>
       </div>
       <div class="auth__login"><button class="auth__login--link"> Authorizations</button></div>
     </div>

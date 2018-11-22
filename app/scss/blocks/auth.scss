@@ -8,7 +8,6 @@
 
 .auth {
   @include centered();
-  border-radius: 10px;
   width: 380px;
   height: 100%;
   perspective: 600px;
@@ -25,24 +24,46 @@
       line-height: 24px;
     }
   }
+  &.auth__flip{
+    .auth__card{
+      transform: rotateY(180deg);
+    }
+    & ~ .auth__login{
+      display: none;
+    }
+  }
 }
 
-.auth__side{
-  @include centered();
-  overflow: hidden;
-  border-radius: 10px;
+.auth__card{
+  position: absolute;
   width: 100%;
+  top: 20%;
+  max-height: 100%;
+  border-radius: 10px;
   transform-style: preserve-3d;
   transition: all 1s ease-in-out;
 }
 
-.auth__side-back{
-  backface-visibility: hidden;
+.auth__side--front{
   position: absolute;
   overflow: hidden;
-  height: 100%;
+  border-radius: 10px;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.auth__side--back{
+  border-radius: 10px;
+  position: absolute;
+  overflow: hidden;
   width: 100%;
   transform: rotateY(180deg);
+  background: rgba(#fcfcfc, .85);
+  backface-visibility: hidden;
+  text-align: center;
+  .subtitle{
+    padding: 30px 80px 15px;
+  }
 }
 
 .auth__info {
@@ -144,3 +165,106 @@
 .auth__socials--upwork{
   padding-top: 3px;
 }
+
+.auth__form {
+  width: 100%;
+  padding: 10px 20px;
+  label{
+    height: 100%;
+    position: relative;
+  }
+  span{
+    font-weight: bold;
+    display: block;
+  }
+  .auth__btns{
+    margin: 0 -20px -10px;
+  }
+}
+
+.svg-login,.svg-password{
+  width: 50px;
+  height: 53px;
+  fill: #c4cbcd;
+  position: absolute;
+  left: 0;
+  top: -17px;
+  padding: 13px;
+  background-color: #f0efe9;
+  border-right: 1px solid transparent;
+}
+
+#login:focus ~ .svg-login,
+#password:focus ~ .svg-password{
+  border-right: 1px solid #00bfa5;
+  fill: #00bfa5;
+}
+
+input:not(#human) {
+  margin-top: 20px;
+  width: 100%;
+  padding: 15px 15px 15px 63px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  &:focus{
+    border: 1px solid #00bfa5;
+    outline: none;
+  }
+}
+
+
+label[for="human"] {
+  display: inline-block;
+  margin: 10px 0;
+  position: relative;
+}
+#human {
+  display: none;
+  width: auto;
+}
+#human:checked ~ .human-check{
+  fill: white;
+  background-color: #00bfa5;
+  border: none;
+}
+.human-check{
+  cursor: pointer;
+  position: relative;
+  top: 3px;
+  margin-right: 10px;
+  padding: 3px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  width: 18px;
+  height: 18px;
+  fill: transparent;
+}
+
+#sure-yes, #sure-no {
+  display: none;
+  &:checked ~ .circle{
+    background-color: #00bfa5;
+    background-clip: content-box;
+  }
+}
+
+
+label[for="sure-no"],
+label[for="sure-yes"]{
+  padding-left: 25px;
+  margin: 15px 0 20px 25px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+.circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  left: 0;
+  background-color: #fff;
+}
+

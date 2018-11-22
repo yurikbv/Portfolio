@@ -297,7 +297,6 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  border-radius: 0.625rem;
   width: 23.75rem;
   height: 100%;
   -webkit-perspective: 37.5rem;
@@ -321,30 +320,51 @@ img {
   line-height: 1.5rem;
 }
 
-.auth__side {
+.auth.auth__flip .auth__card {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.auth.auth__flip ~ .auth__login {
+  display: none;
+}
+
+.auth__card {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  overflow: hidden;
-  border-radius: 0.625rem;
   width: 100%;
+  top: 20%;
+  max-height: 100%;
+  border-radius: 0.625rem;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
 
-.auth__side-back {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+.auth__side--front {
   position: absolute;
   overflow: hidden;
-  height: 100%;
+  border-radius: 0.625rem;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.auth__side--back {
+  border-radius: 0.625rem;
+  position: absolute;
+  overflow: hidden;
   width: 100%;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+  background: rgba(252, 252, 252, 0.85);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  text-align: center;
+}
+
+.auth__side--back .subtitle {
+  padding: 1.875rem 5rem 0.9375rem;
 }
 
 .auth__info {
@@ -454,6 +474,118 @@ img {
 
 .auth__socials--upwork {
   padding-top: 0.1875rem;
+}
+
+.auth__form {
+  width: 100%;
+  padding: 0.625rem 1.25rem;
+}
+
+.auth__form label {
+  height: 100%;
+  position: relative;
+}
+
+.auth__form span {
+  font-weight: bold;
+  display: block;
+}
+
+.auth__form .auth__btns {
+  margin: 0 -1.25rem -0.625rem;
+}
+
+.svg-login,
+.svg-password {
+  width: 3.125rem;
+  height: 3.3125rem;
+  fill: #c4cbcd;
+  position: absolute;
+  left: 0;
+  top: -1.0625rem;
+  padding: 0.8125rem;
+  background-color: #f0efe9;
+  border-right: 0.0625rem solid transparent;
+}
+
+#login:focus ~ .svg-login,
+#password:focus ~ .svg-password {
+  border-right: 0.0625rem solid #00bfa5;
+  fill: #00bfa5;
+}
+
+input:not(#human) {
+  margin-top: 1.25rem;
+  width: 100%;
+  padding: 0.9375rem 0.9375rem 0.9375rem 3.9375rem;
+  border: 0.0625rem solid transparent;
+  border-radius: 0.3125rem;
+}
+
+input:not(#human):focus {
+  border: 0.0625rem solid #00bfa5;
+  outline: none;
+}
+
+label[for="human"] {
+  display: inline-block;
+  margin: 0.625rem 0;
+  position: relative;
+}
+
+#human {
+  display: none;
+  width: auto;
+}
+
+#human:checked ~ .human-check {
+  fill: white;
+  background-color: #00bfa5;
+  border: none;
+}
+
+.human-check {
+  cursor: pointer;
+  position: relative;
+  top: 0.1875rem;
+  margin-right: 0.625rem;
+  padding: 0.1875rem;
+  border: 0.0625rem solid gray;
+  border-radius: 0.1875rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  fill: transparent;
+}
+
+#sure-yes,
+#sure-no {
+  display: none;
+}
+
+#sure-yes:checked ~ .circle,
+#sure-no:checked ~ .circle {
+  background-color: #00bfa5;
+  background-clip: content-box;
+}
+
+label[for="sure-no"],
+label[for="sure-yes"] {
+  padding-left: 1.5625rem;
+  margin: 0.9375rem 0 1.25rem 1.5625rem;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.circle {
+  position: absolute;
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0.3125rem;
+  border: 0.0625rem solid #cccccc;
+  border-radius: 50%;
+  left: 0;
+  background-color: #fff;
 }
 
 .btn {
