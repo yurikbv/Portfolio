@@ -4,6 +4,10 @@
   }
 }
 
+button{
+  cursor: pointer;
+}
+
 .skill-section__title{
   font-size: 28px;
   font-weight: 500;
@@ -52,33 +56,17 @@
 .skills__circle-above{
   transform: rotate(-90deg);
   transform-origin: 50px 50px;
+  transition: all 1s linear;
+  stroke-dasharray: 0, 251.32;
+  @include laptop(transform-origin,53px 53px);
+  @include tablet(transform-origin,57px 57px);
+  @include phone(transform-origin,61px 61px);
 }
 
 .mountains {
   .skills__circle-above{
     stroke: #10c1a8;
   }
-  .skill__circle--HTML5{
-    @include dash(95);
-  }
-  .skill__circle--CSS3{
-    @include dash(95);
-  }
-  .skill__circle--JavaScript{
-    @include dash(60);
-  }
-  .skill__circle--PHP{
-    @include dash(20);
-  }
-  .skill__circle--mySQL{
-    @include dash(5);
-  }
-  [class*='skill__circle--Node']{
-    @include dash(35);
-  }
-  [class*='skill__circle--Mongo']{
-    @include dash(0);
-     }
 }
 
 .desert {
@@ -86,3 +74,39 @@
     stroke: #e7a731;
   }
 }
+
+
+.skill__circle--HTML5{
+  @include dash(95);
+}
+.skill__circle--CSS3{
+  @include dash(95);
+}
+.skill__circle--JavaScript{
+  @include dash(60);
+}
+.skill__circle--PHP{
+  @include dash(33);
+}
+.skill__circle--mySQL{
+  @include dash(5);
+}
+[class*='skill__circle--Node']{
+  @include dash(35);
+}
+[class*='skill__circle--Mongo']{
+  @include dash(0);
+}
+.skill__circle--Git{
+  @include dash(70);
+}
+
+.skill__circle--Gulp{
+  @include dash(80);
+}
+
+.skill__circle--Bower{
+  @include dash(50);
+}
+
+

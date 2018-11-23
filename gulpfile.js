@@ -50,10 +50,12 @@ gulp.task('js', function() {
 		'app/js/preloader.js',
 		'app/js/slider.js',
 		'app/js/hamburger.js',
-		'app/js/flip.js'
+		'app/js/flip.js',
+		'app/js/ActionByScroll.js'
     // 'app/js/sliderJQuery.js',
     // 'app/js/slideshowJQuery.js'
 		])
+	.pipe(sourcemaps.init())
   .pipe(babel({
     presets: ['@babel/env']
   }))
@@ -68,6 +70,7 @@ gulp.task('js', function() {
   })
 	.pipe(concat('scripts.min.js'))
 	.pipe(uglify())
+	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({stream: true}));
 });

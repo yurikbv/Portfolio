@@ -42,6 +42,9 @@
   width: 120%;
   left: 50%;
   margin-left: -60%;
+  @media screen and (min-height: 1100px){
+    width: 250%;
+  }
   @include laptop-block{
        width: 130%;
        margin-left: -75%;

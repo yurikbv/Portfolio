@@ -292,15 +292,19 @@ img {
 }
 
 .auth {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 23.75rem;
+  position: relative;
+  width: 100%;
   height: 100%;
   -webkit-perspective: 37.5rem;
           perspective: 37.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .auth .user {
@@ -330,10 +334,7 @@ img {
 }
 
 .auth__card {
-  position: absolute;
-  width: 100%;
-  top: 20%;
-  max-height: 100%;
+  width: 23.75rem;
   border-radius: 0.625rem;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
@@ -343,6 +344,10 @@ img {
 
 .auth__side--front {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   overflow: hidden;
   border-radius: 0.625rem;
   width: 100%;
@@ -352,7 +357,6 @@ img {
 
 .auth__side--back {
   border-radius: 0.625rem;
-  position: absolute;
   overflow: hidden;
   width: 100%;
   -webkit-transform: rotateY(180deg);
@@ -1014,6 +1018,10 @@ label[for="sure-yes"] {
   fill: #FEFEFE;
 }
 
+button {
+  cursor: pointer;
+}
+
 .skill-section__title {
   font-size: 1.75rem;
   font-weight: 500;
@@ -1066,42 +1074,57 @@ label[for="sure-yes"] {
           transform: rotate(-90deg);
   -webkit-transform-origin: 3.125rem 3.125rem;
           transform-origin: 3.125rem 3.125rem;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  stroke-dasharray: 0, 251.32;
 }
 
 .mountains .skills__circle-above {
   stroke: #10c1a8;
 }
 
-.mountains .skill__circle--HTML5 .skills__circle-above {
+.desert .skills__circle-above {
+  stroke: #e7a731;
+}
+
+.skill__circle--HTML5 .skills__circle-above.toDasharray {
   stroke-dasharray: 238.45, 251.32;
 }
 
-.mountains .skill__circle--CSS3 .skills__circle-above {
+.skill__circle--CSS3 .skills__circle-above.toDasharray {
   stroke-dasharray: 238.45, 251.32;
 }
 
-.mountains .skill__circle--JavaScript .skills__circle-above {
+.skill__circle--JavaScript .skills__circle-above.toDasharray {
   stroke-dasharray: 150.6, 251.32;
 }
 
-.mountains .skill__circle--PHP .skills__circle-above {
-  stroke-dasharray: 50.2, 251.32;
+.skill__circle--PHP .skills__circle-above.toDasharray {
+  stroke-dasharray: 82.83, 251.32;
 }
 
-.mountains .skill__circle--mySQL .skills__circle-above {
+.skill__circle--mySQL .skills__circle-above.toDasharray {
   stroke-dasharray: 12.55, 251.32;
 }
 
-.mountains [class*='skill__circle--Node'] .skills__circle-above {
+[class*='skill__circle--Node'] .skills__circle-above.toDasharray {
   stroke-dasharray: 87.85, 251.32;
 }
 
-.mountains [class*='skill__circle--Mongo'] .skills__circle-above {
+[class*='skill__circle--Mongo'] .skills__circle-above.toDasharray {
   stroke-dasharray: 0, 251.32;
 }
 
-.desert .skills__circle-above {
-  stroke: #e7a731;
+.skill__circle--Git .skills__circle-above.toDasharray {
+  stroke-dasharray: 175.7, 251.32;
+}
+
+.skill__circle--Gulp .skills__circle-above.toDasharray {
+  stroke-dasharray: 200.8, 251.32;
+}
+
+.skill__circle--Bower .skills__circle-above.toDasharray {
+  stroke-dasharray: 125.5, 251.32;
 }
 
 .slider {
@@ -1367,7 +1390,7 @@ label[for="sure-yes"] {
 .subtitle {
   font-family: "Bernier",Arial,sans-serif;
   font-weight: 400;
-  letter-spacing: 0.09812rem;
+  letter-spacing: 1.3.5625rem;
   position: relative;
   display: inline-block;
 }
@@ -1510,6 +1533,11 @@ label[for="sure-yes"] {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+
+  .skills__circle-above {
+    -webkit-transform-origin: 3.3125rem 3.3125rem;
+            transform-origin: 3.3125rem 3.3125rem;
+  }
 }
 
 @media screen and (max-width: 48rem) {
@@ -1564,6 +1592,11 @@ label[for="sure-yes"] {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .skills__circle-above {
+    -webkit-transform-origin: 3.5625rem 3.5625rem;
+            transform-origin: 3.5625rem 3.5625rem;
   }
 
   .slider {
@@ -1648,11 +1681,22 @@ label[for="sure-yes"] {
     margin-left: -175%;
   }
 
+  .skills__circle-above {
+    -webkit-transform-origin: 3.8125rem 3.8125rem;
+            transform-origin: 3.8125rem 3.8125rem;
+  }
+
   .slideshow__display-pic {
     padding-bottom: 3.125rem;
   }
 
   .socials {
     left: 0.9375rem;
+  }
+}
+
+@media screen and (min-height: 68.75rem) {
+  .parallax-mount__layer {
+    width: 250%;
   }
 }
