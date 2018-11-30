@@ -6,26 +6,8 @@ block title
 block content
   .auth-container
     .hero__bg
-      .parallax-mount
-        .parallax-mount__layer
-          img(src="./img/parallax-mount/Layer9.jpg" class="parallax-mount__image")
-        .parallax-mount__layer
-          img(src="./img/parallax-mount/Layer8-1.png" class="parallax-mount__image")
-        .parallax-mount__layer
-          img(src="./img/parallax-mount/Layer7-1.png" class="parallax-mount__image")
-        .parallax-mount__layer
-          img(src="./img/parallax-mount/Layer6-1.png" class="parallax-mount__image")
-        .parallax-mount__layer
-          img(src="./img/parallax-mount/6cloud_PNG4.png" class="parallax-mount__image")
-        .parallax-mount__layer
-          img(src="./img/parallax-mount/Layer4-1.png" class="parallax-mount__image")
-        .parallax-mount__layer
-          img(src="./img/parallax-mount/3sky.png" class="parallax-mount__image")
-        .parallax-mount__layer
-          img(src="./img/parallax-mount/Layer2-1.png" class="parallax-mount__image")
-        .parallax-mount__layer
-          img(src="./img/parallax-mount/Layer1-1.png" class="parallax-mount__image")
-
+      include ../sections/parallax
+      include ../sections/night
     .auth
       .auth__card
         .auth__side--front
@@ -39,10 +21,10 @@ block content
                 each icon in ['github', 'upwork_round']
                   a.auth__socals--link
                     +image-svg('auth__socials--image auth__socials--' + icon,icon,"0 0 30 30")
+          include ../sections/change
           .auth__btns
             a(href="works.html").auth__btn My last Works
             a(href="about.html").auth__btn About Me
-            button.auth__btn.change__btn Change Theme
         .auth__side--back
           .subtitle Authorizations
           form.auth__form

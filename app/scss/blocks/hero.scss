@@ -1,14 +1,3 @@
-.mountains{
-  .hero__bg{
-    top: 0;
-    right: 0;
-    bottom: 0;
-  }
-  .parallax-mount{
-    display: block;
-  }
-}
-
 .hero{
   min-height: 650px;
   overflow: hidden;
@@ -25,12 +14,31 @@
   display: none;
 }
 
+.mountains{
+  .hero__bg{
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .parallax-mount{
+    display: block;
+  }
+}
+
 .desert{
   .hero__bg{
     height: 100%;
     width: 6112px;
     background: url("../img/bg/sand.jpg") center left repeat-x;
     animation: bg 120s linear infinite;
+  }
+}
+
+.night {
+  .hero__bg{
+    top: 0;
+    right: 0;
+    bottom: 0;
   }
 }
 

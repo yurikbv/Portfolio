@@ -372,7 +372,7 @@ img {
 }
 
 .auth__info {
-  padding: 2.5rem 4.375rem;
+  padding: 2.5rem 4.375rem 0;
   background: rgba(252, 252, 252, 0.85);
 }
 
@@ -592,6 +592,50 @@ label[for="sure-yes"] {
   background-color: #fff;
 }
 
+.change__theme {
+  background: rgba(252, 252, 252, 0.85);
+}
+
+.change__title {
+  padding: 0.625rem 0;
+  text-align: center;
+  color: #00bfa5;
+}
+
+.change__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.change__theme-item {
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.change__theme-item span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.change__button {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.change__image {
+  border-radius: 0.625rem;
+}
+
 .btn {
   padding: 0.625rem 0.9375rem;
   border-radius: 0.3125rem;
@@ -763,16 +807,6 @@ label[for="sure-yes"] {
   left: 2.5rem;
 }
 
-.mountains .hero__bg {
-  top: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.mountains .parallax-mount {
-  display: block;
-}
-
 .hero {
   min-height: 40.625rem;
   overflow: hidden;
@@ -789,12 +823,28 @@ label[for="sure-yes"] {
   display: none;
 }
 
+.mountains .hero__bg {
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.mountains .parallax-mount {
+  display: block;
+}
+
 .desert .hero__bg {
   height: 100%;
   width: 382rem;
   background: url("../img/bg/sand.jpg") center left repeat-x;
   -webkit-animation: bg 120s linear infinite;
           animation: bg 120s linear infinite;
+}
+
+.night .hero__bg {
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 
 @-webkit-keyframes bg {
@@ -864,6 +914,32 @@ label[for="sure-yes"] {
   color: #00bfa5;
 }
 
+.night__container {
+  display: none;
+}
+
+.night .night__container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.night__video {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.night__image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
 .wrapper-parallax {
   overflow: hidden;
   background-color: #fedcc8;
@@ -899,6 +975,11 @@ label[for="sure-yes"] {
   left: 0;
   width: 100%;
   height: 100%;
+  display: none;
+}
+
+.mountains .parallax-mount {
+  display: block;
 }
 
 .parallax-mount__layer {
@@ -1116,7 +1197,7 @@ button {
 }
 
 .skill__circle--Git .skills__circle-above.toDasharray {
-  stroke-dasharray: 175.7, 251.32;
+  stroke-dasharray: 188.25, 251.32;
 }
 
 .skill__circle--Gulp .skills__circle-above.toDasharray {
@@ -1290,6 +1371,10 @@ button {
   fill: rgba(255, 255, 255, 0.8);
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+}
+
+.without__link {
+  opacity: 0;
 }
 
 .slideshow__display {

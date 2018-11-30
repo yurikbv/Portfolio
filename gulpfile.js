@@ -46,14 +46,13 @@ gulp.task('pug', function() {
 gulp.task('js', function() {
 	return gulp.src([
 		// 'app/libs/jquery/dist/jquery.min.js',
+		'app/js/changeTheme.js',
 		'app/js/common.js',
 		'app/js/preloader.js',
 		'app/js/slider.js',
 		'app/js/hamburger.js',
 		'app/js/flip.js',
 		'app/js/ActionByScroll.js'
-    // 'app/js/sliderJQuery.js',
-    // 'app/js/slideshowJQuery.js'
 		])
 	.pipe(sourcemaps.init())
   .pipe(babel({

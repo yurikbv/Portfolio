@@ -75,7 +75,6 @@ button{
   }
 }
 
-
 .skill__circle--HTML5{
   @include dash(95);
 }
@@ -98,7 +97,7 @@ button{
   @include dash(0);
 }
 .skill__circle--Git{
-  @include dash(70);
+  @include dash(75);
 }
 
 .skill__circle--Gulp{

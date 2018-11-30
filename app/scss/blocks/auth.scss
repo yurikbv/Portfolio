@@ -66,7 +66,7 @@
 }
 
 .auth__info {
-  padding: 40px 70px;
+  padding: 40px 70px 0;
   background: rgba(#fcfcfc, .85);
 }
 
@@ -247,7 +247,6 @@ label[for="human"] {
   }
 }
 
-
 label[for="sure-no"],
 label[for="sure-yes"]{
   padding-left: 25px;
@@ -267,3 +266,38 @@ label[for="sure-yes"]{
   background-color: #fff;
 }
 
+.change__theme{
+  background: rgba(#fcfcfc, .85);
+}
+
+.change__title {
+  padding: 10px 0;
+  text-align: center;
+  color: #00bfa5;
+}
+
+.change__container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.change__theme-item{
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  span{
+    display: block;
+    @include centered();
+    color: #fff;
+  }
+}
+
+.change__button{
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.change__image{
+  border-radius: 10px;
+}

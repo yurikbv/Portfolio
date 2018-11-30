@@ -5,15 +5,15 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="img/favicon/fav_mount.png">
   <link rel="stylesheet" href="./css/style.min.css" type="text/css">
   <script src="./js/svg.js"></script>
-  <script src="./js/activeTheme.js"></script>
   <link rel="preload" href="./fonts/Roboto-Bold.woff2" type="font/woff2" as="font" crossorigin>
   <link rel="preload" href="./fonts/Roboto-Regular.woff2" type="font/woff2" as="font" crossorigin>
   <title>Hello</title>
 </head>
 
-<body class="mountains">
+<body class="night">
   <div class="svg-placeholder"></div>
   <script>document.querySelector('.svg-placeholder').innerHTML = SVG_SPRITE</script>
   <div class="wrapper">
@@ -30,6 +30,8 @@
           <div class="parallax-mount__layer"><img class="parallax-mount__image" src="./img/parallax-mount/Layer2-1.png"></div>
           <div class="parallax-mount__layer"><img class="parallax-mount__image" src="./img/parallax-mount/Layer1-1.png"></div>
         </div>
+        <div class="night__container"><video class="night__video" autoplay="autoplay" loop="loop">
+            <source src="./video/night.mp4"></video><img class="night__image" src="../img/bg/night-bg.png"></div>
       </div>
       <div class="auth">
         <div class="auth__card">
@@ -46,7 +48,15 @@
                     </svg></a></div>
               </div>
             </div>
-            <div class="auth__btns"><a class="auth__btn" href="works.html">My last Works</a><a class="auth__btn" href="about.html">About Me</a><button class="auth__btn change__btn">Change Theme</button></div>
+            <div class="change__theme">
+              <div class="change__title">Change Theme</div>
+              <div class="change__container">
+                <div class="change__theme-item" data-theme="mountains"><button class="change__button"><img class="change__image" src="./img/button-mount.jpg"></button><span>Mountains</span></div>
+                <div class="change__theme-item" data-theme="desert"><button class="change__button"><img class="change__image" src="./img/button-sand.jpg"></button><span>Desert</span></div>
+                <div class="change__theme-item" data-theme="night"><button class="change__button"><img class="change__image" src="./img/button-night.jpg"></button><span>Night</span></div>
+              </div>
+            </div>
+            <div class="auth__btns"><a class="auth__btn" href="works.html">My last Works</a><a class="auth__btn" href="about.html">About Me</a></div>
           </div>
           <div class="auth__side--back">
             <div class="subtitle">Authorizations</div>
@@ -71,7 +81,6 @@
       <div class="preloader__percents">0%</div>
     </div>
   </div>
-  <!--script(src="./libs/jQuery/dist/jquery.min.js")-->
   <script src="./js/scripts.min.js"></script>
 </body>
 
